@@ -1,0 +1,13 @@
+Proyecto de Base de datos con PHP
+Pasos para desarrollo
+1.- Crear una base de datos - Mysql.
+1.1.- Crar una tabla con los campos:
+id <AI>, nombre, tel y mail tabla personas
+1.2.- Registrar un par de datos
+nota: INSERT INTO `personas` (`id`, `nombre`, `tel`, `mail`)
+VALUES (NULL, 'Arturo Bustamante Lazcano', '2382085000',
+'prof_arturobustamante@ajalpan.tecnm.mx'),
+(NULL, 'Rosalba Guizasola Martinez', '2363825545',
+'rosalbagm@hotmail.com');
+2.- Crear mi proyecto
+

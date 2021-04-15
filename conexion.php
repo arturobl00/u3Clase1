@@ -9,9 +9,6 @@
 
     //Test Conexion
     if(!$conn){
-        echo "No hay Conexion!!!";
-    }
-    else{
-        echo "Felicidades estas conectado!!!";
+        echo "No se pudo establecer la conexión a la Base de Datos";
     }
 ?>
