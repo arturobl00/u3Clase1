@@ -10,4 +10,21 @@ VALUES (NULL, 'Arturo Bustamante Lazcano', '2382085000',
 (NULL, 'Rosalba Guizasola Martinez', '2363825545',
 'rosalbagm@hotmail.com');
 2.- Crear mi proyecto
+2.1.- Creamos un archivo llamado conexion.php y establecemos el script de conexion
+<?php
+    $servidor = "localhost";
+    $usuario = "root";
+    $contraseña = "";
+    $basedatos = "unidad3";
+
+    //Conexion
+    $conn = mysqli_connect($servidor,$usuario,$contraseña,$basedatos);
+
+    //Test Conexion
+    if(!$conn){
+        echo "No se pudo establecer la conexión a la Base de Datos";
+    }
+?>
+2.2.- Crear un archivo index de interface <<Mostrar los datos de mi base>>
+
 
