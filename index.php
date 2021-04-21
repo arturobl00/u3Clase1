@@ -35,7 +35,7 @@
         </thead>
         <tbody>
             <?php
-                //cilco para extraer el registro del paquete
+                //ciclo para extraer el registro del paquete
                 while($dato = mysqli_fetch_assoc($resultado)){
                     echo '<tr> <th scope="row">'.$dato['id'].'</th>';
                     echo '<td>'.$dato['nombre'].'</td>';
@@ -45,5 +45,36 @@
             ?>
         </tbody>
     </table>
+    
+    <br/>
+
+    <form method="POST">
+        <h2>Formulario para el Registro de Datos</h2>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nombre" placeholder="Escriba su Nombre" name="nombre">
+            <label for="nombre">Escriba su Nombre</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="tel" class="form-control" id="telefono" placeholder="No de Telefono" name="telefono">
+            <label for="Telefono">No de Telefono</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" name="correo">
+            <label for="email">name@example.com</label>
+        </div>
+        <div>
+            <input class="btn btn-primary" type="submit" value="Guardar Datos" name="boton"/>
+        </div>
+    </form>
+
+    <?php
+        if($_POST){
+            $nombre = $_POST['nombre'];
+            $telefono = $_POST['telefono'];
+            $correo = $_POST['correo'];
+
+            echo $nombre, $telefono, $correo;
+        }
+    ?>
 </body>
 </html>
