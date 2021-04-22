@@ -31,6 +31,8 @@
                 <th scope="col">NOMBRE</th>
                 <th scope="col">TELEFONO</th>
                 <th scope="col">EMAIL</th>
+                <th scope="col">EDITAR</th>
+                <th scope="col">BORRAR</th>
             </tr>
         </thead>
         <tbody>
@@ -40,7 +42,9 @@
                     echo '<tr> <th scope="row">'.$dato['id'].'</th>';
                     echo '<td>'.$dato['nombre'].'</td>';
                     echo '<td>'.$dato['tel'].'</td>';
-                    echo '<td>'.$dato['mail'].'</td></tr>';
+                    echo '<td>'.$dato['mail'].'</td>';
+                    echo '<td><buttom class="btn btn-outline-warning">Editar</buttom></td>';
+                    echo '<td><buttom class="btn btn-outline-danger">Borrar</buttom></td></tr>';
                 }
             ?>
         </tbody>
@@ -48,7 +52,7 @@
     
     <br/>
 
-    <form method="POST">
+    <form method="post">
         <h2>Formulario para el Registro de Datos</h2>
         <div class="form-floating mb-3">
             <input type="text" class="form-control" id="nombre" placeholder="Escriba su Nombre" name="nombre">
@@ -72,8 +76,9 @@
             $nombre = $_POST['nombre'];
             $telefono = $_POST['telefono'];
             $correo = $_POST['correo'];
-
-            echo $nombre, $telefono, $correo;
+            $insertar = "Insert Into personas (nombre, tel, mail) Values ('$nombre', '$telefono', '$correo')";
+            mysqli_query($conn, $insertar);
+            mysqli_close($conn);
         }
     ?>
 </body>
