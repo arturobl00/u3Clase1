@@ -21,6 +21,7 @@
 
         //Variable contenedora de datos
         $resultado = mysqli_query($conn, $consulta);
+
     ?>
 
     <!--Proceso de extracción de datos-->
@@ -43,9 +44,9 @@
                     echo '<td>'.$dato['nombre'].'</td>';
                     echo '<td>'.$dato['tel'].'</td>';
                     echo '<td>'.$dato['mail'].'</td>';
-                    echo '<td><buttom class="btn btn-outline-warning">Editar</buttom></td>';
-                    echo '<td><buttom class="btn btn-outline-danger">Borrar</buttom></td></tr>';
-                }
+                    echo '<td><a href="actualizar.php?id='.$dato['id'].'" class="btn btn-warning">Actualizar</a></td>';
+                    echo '<td><a href="eliminar.php?id='.$dato['id'].'" class="btn btn-danger">Eliminar</a></td></tr>';
+                } 
             ?>
         </tbody>
     </table>

@@ -27,4 +27,4 @@ VALUES (NULL, 'Arturo Bustamante Lazcano', '2382085000',
 ?>
 2.2.- Crear un archivo index de interface <<Mostrar los datos de mi base>>
 
-
+'<td><a href="actualizar.php?id='.$dato['id'].'" class="btn btn-warning">Actualizar</a></td>';
